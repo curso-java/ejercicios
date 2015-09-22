@@ -9,11 +9,13 @@ public class GarageTest {
 
 	private Garage sut;
 	private Vehiculo veh;
+	private Vehiculo veh2;
 	
 	@Before
 	public void setUp() {
 		sut = new GarageImpl();
 		veh = new Coche();
+		veh2 = new Moto();
 	}
 	
 	@Test
@@ -25,5 +27,18 @@ public class GarageTest {
 		assertEquals(veh, sut.extraer());
 		
 	}
+	
+	
+	@Test
+	public void testExtraerVehiculo() {
+		
+		
+		sut.estacionar(veh);
+		sut.estacionar(veh2);
+		
+		assertEquals(veh, sut.extraer());
+		assertEquals(veh2, sut.extraer());
+		
+	}	
 
 }

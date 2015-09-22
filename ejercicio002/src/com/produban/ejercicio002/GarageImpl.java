@@ -1,14 +1,13 @@
 package com.produban.ejercicio002;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GarageImpl implements Garage {
-	private Vehiculo vehiculo;
-
-	public Vehiculo getVehiculo() {
-		return vehiculo;
-	}
-
-	public void setVehiculo(Vehiculo vehiculo) {
-		this.vehiculo = vehiculo;
+	private List<Vehiculo> vehiculos;
+	
+	public GarageImpl() {
+		this.vehiculos = new ArrayList<Vehiculo>();
 	}
 	
 	/* (non-Javadoc)
@@ -16,7 +15,7 @@ public class GarageImpl implements Garage {
 	 */
 	@Override
 	public void estacionar(Vehiculo vehiculo) {
-		this.vehiculo = vehiculo;
+		vehiculos.add(vehiculo);
 	}
 	
 	/* (non-Javadoc)
@@ -24,8 +23,6 @@ public class GarageImpl implements Garage {
 	 */
 	@Override
 	public Vehiculo extraer() {
-		Vehiculo ret = vehiculo;
-		this.vehiculo = null;
-		return ret;
+		return vehiculos.remove(0);
 	}
 }
