@@ -12,7 +12,7 @@ public class GarageTest {
 	
 	@Before
 	public void setUp() {
-		sut = new Garage();
+		sut = new GarageImpl();
 		veh = new Coche();
 	}
 	
@@ -20,9 +20,9 @@ public class GarageTest {
 	public void testSetVehiculo() {
 		
 		
-		sut.setVehiculo(veh);
+		sut.estacionar(veh);
 		
-		assertEquals(veh, sut.getVehiculo());
+		assertEquals(veh, sut.extraer());
 		
 	}
 

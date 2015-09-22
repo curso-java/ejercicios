@@ -1,15 +1,9 @@
 package com.produban.ejercicio002;
 
-public class Garage {
-	private Vehiculo vehiculo;
+public interface Garage {
 
-	public Vehiculo getVehiculo() {
-		return vehiculo;
-	}
+	void estacionar(Vehiculo vehiculo);
 
-	public void setVehiculo(Vehiculo vehiculo) {
-		this.vehiculo = vehiculo;
-	}
-	
-	
+	Vehiculo extraer();
+
 }
