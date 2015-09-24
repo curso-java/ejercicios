@@ -6,8 +6,7 @@ public class CocheRepositoryImpl implements CocheRepository {
 
 	@Override
 	public Coche create(Coche coche) {
-		// TODO Auto-generated method stub
-		return null;
+		return coche;
 	}
 
 	@Override
