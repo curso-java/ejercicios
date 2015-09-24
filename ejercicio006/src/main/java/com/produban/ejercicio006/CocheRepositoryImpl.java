@@ -18,7 +18,7 @@ public class CocheRepositoryImpl implements CocheRepository {
 	@Override
 	public Coche get(Long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return new Coche();
 	}
 
 	@Override

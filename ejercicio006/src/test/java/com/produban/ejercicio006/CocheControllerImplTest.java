@@ -42,4 +42,13 @@ public class CocheControllerImplTest {
 		assertNotNull("El coche no debería ser nulo", cocheResultado);
 	}
 
+	
+
+	@Test
+	public void testFind() {
+		
+		Coche cocheResultado = cocheController.get(1l);
+		
+		assertNotNull("El coche no debería ser nulo", cocheResultado);
+	}	
 }
