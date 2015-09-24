@@ -11,7 +11,7 @@ public class AppTest {
 	
 	@Test
 	public void testEjemplo() {
-		assertTrue(true);
+		assertTrue(new App().suma(3, 4) == 7);
 	}
 	
 }
