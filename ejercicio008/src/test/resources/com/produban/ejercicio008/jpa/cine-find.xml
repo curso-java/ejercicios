@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <table name="cine">
+    <column>idCine</column>
+    <column>nombre</column>
+    <row>
+      <value>1</value>
+      <value>Capito</value>
+    </row>
+  </table>
+</dataset>

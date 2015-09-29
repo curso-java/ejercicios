@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <table name="cine">
+    <column>idCine</column>
+    <column>nombre</column>
+    <row>
+      <value>1</value>
+      <value>Capito</value>
+    </row>
+  </table>
+  <table name="sala">
+    <column>idSala</column>
+    <column>version</column>
+    <column>nombre</column>
+    <column>idCine</column>
+    <column>aforo</column>
+    <column>disponibles</column>
+    <row>
+      <value>1</value>
+      <value>1</value>
+      <value>Groucho</value>
+      <value>1</value>
+      <value>7</value>
+      <value>7</value>
+    </row>
+    <row>
+    	<value>2</value>
+    	<value>1</value>
+    	<value>Harpo</value>
+    	<value>1</value>
+    	<value>100</value>
+    	<value>100</value>
+    </row>
+    <row>
+    	<value>3</value>
+    	<value>1</value>
+    	<value>Chico</value>
+    	<value>1</value>
+    	<value>85</value>
+    	<value>85</value>
+    </row>    
+  </table>  
+</dataset>

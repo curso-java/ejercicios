@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+    <changeSet author="usuario (generated)" id="1363817065326-1">
+        <createTable tableName="cine">
+            <column name="idCine" type="INT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="nombre" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="sala">
+            <column name="idSala" type="INT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="version" type="INT">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="nombre" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="idCine" type="INT">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="aforo" type="INT">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="disponibles" type="INT">
+            	<constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="venta">
+        	<column name="idVenta" type="INT" autoIncrement="true">
+        		<constraints nullable="false" primaryKey="true"/>        	
+        	</column>
+        	<column name="cantidad" type="INT">
+        		<constraints nullable="false"/>
+        	</column>
+        	<column name="importe" type="DOUBLE">
+        		<constraints nullable="false"/>
+        	</column>
+        	<column name="idSala" type="INT">
+        		<constraints nullable="false"/> 
+        	</column>
+        </createTable>
+
+        <addForeignKeyConstraint 
+        						 baseColumnNames="idCine" baseTableName="sala" 
+        						 constraintName="idCine_fk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" 
+        						 referencedColumnNames="idCine" referencedTableName="cine" 
+        						 referencesUniqueColumn="false"/>
+        <addForeignKeyConstraint 
+        						 baseColumnNames="idSala" baseTableName="venta" 
+        						 constraintName="idSala_fk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" 
+        						 referencedColumnNames="idSala" referencedTableName="sala" 
+        						 referencesUniqueColumn="false"/>
+    </changeSet>
+</databaseChangeLog>
